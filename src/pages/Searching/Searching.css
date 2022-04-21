@@ -1,0 +1,107 @@
+.searching {
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+}
+
+.searching__container_wrapper {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(36, 0, 136);
+    padding: 0 180px;
+}
+
+.searching__people {
+    width: 100%;
+    min-height: 750px;
+    background-color: rgb(201, 201, 201);
+    margin: 0 auto;
+    padding: 30px 180px;
+}
+
+.searching__form {
+    width: max-content;
+    padding: 30px 120px;
+    margin: 20px 100px 30px;
+    font-size: 18px;
+    height: max-content;
+    border: 2px solid rgba(27, 0, 137, 0.647);
+    border-radius: 20px;
+}
+
+.searching__result {
+    min-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    border: 2px solid rgba(27, 0, 137, 0.647);
+    border-radius: 20px;
+}
+
+.searching__user {
+    width: 220px;
+    height: 310px;
+    margin: 20px 15px;
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.searching__user:hover {
+    border: 3px solid rgba(27, 0, 137, 0.647);
+    cursor: pointer;
+}
+
+.search__info {
+    padding: 10px;
+    text-align: center;
+}
+
+.search__img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.searching__form_button {
+    width: 150px;
+    display: block;
+    margin: 50px auto 30px;
+    transition-duration: 0.5s;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.443);
+}
+
+.searching__form_button:hover {
+    cursor: pointer;
+    background-color: rgb(36, 0, 136);
+    color: aliceblue;
+}
+
+.searching__form_input {
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.search__form_button_all {
+    height: 50px;
+    width: 150px;
+    display: block;
+    transition-duration: 0.5s;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.443);
+}
+
+.search__form_button_all:hover {
+    cursor: pointer;
+    background-color: rgb(36, 0, 136);
+    color: aliceblue;
+}

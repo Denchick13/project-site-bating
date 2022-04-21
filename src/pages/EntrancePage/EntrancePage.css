@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap');
+
+.entrance__container {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    padding: 40px 160px 20px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrance__back {
+    text-decoration: none;
+    color: aliceblue;
+    height: 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.entrance__back::after {
+    content: '\21D0 \20 Назад';
+}
+
+.entrance__back:hover {
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+}
+
+.entrance__text {
+    width: 450px;
+    height: max-content;
+    padding: 30px;
+    background-color: rgba(6, 34, 213, 0.552);
+    border-radius: 20px;
+}
+
+.form__entrance {
+    width: 450px;
+    height: 300px;
+    background-color: rgba(6, 34, 213, 0.514);
+    border-radius: 20px;
+}
+
+.form__entrance_span {
+    display: block;
+    width: 100px;
+}
+
+.form__entrance_label {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.form__entrance_input {
+    width: 200px;
+    height: 30px;
+    background-color: rgb(213, 216, 216);
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.form__entrance_header {
+    text-align: center;
+    padding: 20px 0;
+    color: aliceblue;
+}
+
+.form__entrance_cont_label {
+    padding: 0 0 0 46px;
+    margin-top: 20px;
+}
+
+.form__entrance_button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    transition-duration: 0.5s;
+    background-color: rgba(213, 216, 216, 0.833);
+    margin: 40px auto 0;
+}
+
+.form__entrance_button:hover {
+    cursor: pointer;
+    background-color: rgba(88, 8, 217, 0.666);
+    color: aliceblue;
+}

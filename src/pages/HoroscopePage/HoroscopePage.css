@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap');
+
+
+.horoscope {
+    width: 100%;
+    z-index: 100;
+    padding: 20px 10px;
+}
+
+.horoscope__arrow_container {
+    width: 100%;
+}
+
+.horoscope__arrow_back {
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    height: 20px;
+    margin-right: 50px;
+    position: fixed;
+    margin-top: 20px;
+}
+
+.horoscope__arrow_back::after {
+    content: '\21D0 \20 Назад';
+}
+
+.horoscope__h1 {
+    font-family: 'Lobster', cursive;
+    color: aliceblue;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.horoscope__sign_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 200px 40px 200px;
+    justify-content: center;
+}
+
+.horoscope__text {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.horoscope__zodiac_sign {
+    width: 450px;
+    margin: 10px;
+    background-color: rgba(87, 0, 168, 0.674);
+    padding: 10px;
+    border-radius: 20px;
+    color: aliceblue;
+}
+

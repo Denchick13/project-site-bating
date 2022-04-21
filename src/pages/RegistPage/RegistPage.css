@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap');
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    padding: 40px 160px 20px 150px;
+}
+
+.wrapper__back {
+    height: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Lobster', cursive;
+}
+
+.wrapper__back::after {
+    content: '\21D0 \20 Назад';
+}
+
+.wrapper__back:hover {
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+}
+
+.wrapper__div {
+    width: max-content;
+    height: max-content;
+    background-color: rgba(40, 11, 201, 0.323);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0px 20px 0 0;
+    text-align: center;
+}
+
+.form__galaxy_of_love {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 40px;
+    color: aliceblue;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    background-color: rgba(64, 1, 188, 0.534);
+    z-index: 10;
+    font-family: 'Cookie', cursive;
+}
+
+.form__galaxy {
+    height: 80px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.form__regist {
+    width: max-content;
+    padding: 10px 30px 30px 30px;
+    border-radius: 15px;
+    background-color: rgba(6, 34, 213, 0.312);
+}
+
+.form__regist_input {
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 0 10px;
+    background-color: rgb(213, 216, 216);
+}
+
+.form__regist_date {
+    height: 50px;
+}
+
+.form__regist_label {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.form__regist_gender {
+    margin-left: 20px;
+}
+
+.form__regist_label_date {
+    display: flex;
+}
+
+.regist__button {
+    display: block;
+    width: 250px;
+    height: 50px;
+    margin: 30px auto;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgb(213, 216, 216);
+    transition-duration: 0.8s;
+}
+
+.regist__button:hover {
+    cursor: pointer;
+    background-color: rgba(88, 8, 217, 0.666);
+    color: aliceblue;
+}
+
+.form_span {
+    width: 90px;
+}
+
+.wrapper__text {
+    font-family: 'Cookie', cursive;
+    font-size: 56px;
+    color: aliceblue;
+}
+
+.wrapper__text_next {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.regist__message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.756);
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.regist__message_div {
+    padding: 10px;
+    border: 3px solid white;
+    border-radius: 20px;
+}

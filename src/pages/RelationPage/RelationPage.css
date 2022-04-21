@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap');
+
+.relation__container {
+    z-index: 100;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.relation__container_arrow {
+    width: 150px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.relation__back {
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    height: 20px;
+    margin-right: 50px;
+    position: fixed;
+}
+
+.relation__back::after {
+    content: '\21D0 \20 Назад';
+}
+
+.relation__content {
+    width: 80%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 11, 93, 0.817);
+    margin: 30px auto;
+}
+
+.relation__content p {
+    line-height: 1.5;
+    color: aliceblue;
+    font-size: 18px;
+    text-align: justify;
+}
