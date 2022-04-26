@@ -2,9 +2,9 @@
 
 .entrance__container {
     z-index: 100;
-    width: 100%;
+    width: 1500px;
     height: 100%;
-    padding: 40px 160px 20px 150px;
+    padding: 60px 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -29,18 +29,22 @@
 }
 
 .entrance__text {
-    width: 450px;
+    width: 500px;
     height: max-content;
     padding: 30px;
-    background-color: rgba(6, 34, 213, 0.552);
+    /* background-color: rgba(6, 34, 213, 0.552); */
     border-radius: 20px;
+    background: linear-gradient(to bottom, rgba(6, 34, 213, 0.723), rgb(252, 118, 0));
+    box-shadow: 5px -15px 20px 10px rgb(58, 58, 58);
 }
 
 .form__entrance {
     width: 450px;
     height: 300px;
-    background-color: rgba(6, 34, 213, 0.514);
+    /* background-color: rgba(6, 34, 213, 0.514); */
     border-radius: 20px;
+    background: linear-gradient(to left bottom, rgba(6, 34, 213, 0.761), rgb(252, 118, 0));
+    box-shadow: 10px -10px 20px 10px rgb(58, 58, 58);
 }
 
 .form__entrance_span {
@@ -88,6 +92,17 @@
 
 .form__entrance_button:hover {
     cursor: pointer;
-    background-color: rgba(88, 8, 217, 0.666);
+    background-color: rgba(6, 34, 213, 0.514);
     color: aliceblue;
+    font-size: 20px;
+}
+
+.form__entrance_password_button {
+    position: relative;
+    right: 35px;
+    width: 30px;
+}
+
+.form__entrance_password_button:hover {
+    cursor: pointer;
 }

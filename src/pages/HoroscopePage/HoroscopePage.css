@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap');
 
-
 .horoscope {
-    width: 100%;
+    width: 100vw;
     z-index: 100;
-    padding: 20px 10px;
+    padding: 20px 50px;
 }
 
 .horoscope__arrow_container {
-    width: 100%;
+    margin-top: 30px;
 }
 
 .horoscope__arrow_back {
@@ -18,9 +17,7 @@
     font-weight: 900;
     color: rgb(0, 0, 0);
     height: 20px;
-    margin-right: 50px;
     position: fixed;
-    margin-top: 20px;
 }
 
 .horoscope__arrow_back::after {
@@ -37,10 +34,12 @@
 }
 
 .horoscope__sign_container {
+    width: 1800px;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 200px 40px 200px;
+    /* padding: 0 200px 40px 200px; */
     justify-content: center;
+    margin: 0 auto;
 }
 
 .horoscope__text {
@@ -52,7 +51,7 @@
     width: 450px;
     margin: 10px;
     background-color: rgba(87, 0, 168, 0.674);
-    padding: 10px;
+    padding: 20px 30px;
     border-radius: 20px;
     color: aliceblue;
 }

@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
-import '../EntrancePage/EntrancePage.css'
+import '../EntrancePage/EntrancePage.css';
+import eyeClose from '../../components/images/not-visible-interface-symbol-of-an-eye-with-a-slash-on-it_icon-icons.com_57783.png';
+import eyeOpen from '../../components/images/eye-visible-outlined-interface-symbol_icon-icons.com_57844.png';
 
 export default function EntrancePage(props) {
-const { onSubmit } = props;
-
+    const { value, onSubmit, onclick, iseye, onchange, click } = props;
+    // console.log(value)
     return (
         <div className="entrance__container">
 
-            <Link className="entrance__back" to='/'></Link>
+            <Link
+                onClick={click}
+                className="entrance__back"
+                to='/'
+            >
+            </Link>
 
             <div className="entrance__text">
 
@@ -38,23 +45,33 @@ const { onSubmit } = props;
                             type="text"
                             name='email'
                             placeholder="Email"
-                        required
+                            required
                         />
                     </label>
                     <br />
                     <label className="form__entrance_label" htmlFor="password">
                         <span className="form__entrance_span">Пароль</span>
                         <input
+                            value={value ?? ''}
+                            onChange={onchange}
                             className="form__entrance_input"
-                            type="text"
+                            type={!iseye ? 'password' : 'text'}
                             name='password'
                             placeholder="Пароль"
-                        required
+                            required
+                        />
+                        <img
+                            src={iseye ? eyeOpen : eyeClose}
+                            onClick={onclick}
+                            className="form__entrance_password_button"
+                            style={{
+                                display: value ? "block" : "none"
+                            }}
                         />
                     </label>
                 </div>
 
-                    <button className="form__entrance_button">Войти</button>
+                <button className="form__entrance_button">Войти</button>
 
             </form>
 

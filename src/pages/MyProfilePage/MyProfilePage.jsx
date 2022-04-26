@@ -4,7 +4,7 @@ import '../MyProfilePage/MyProfilePage.css';
 export default function MyProfilePage(props) {
     const { onClick, users } = props;
 
-    const current = JSON.parse(localStorage.getItem('current'))
+    const current = JSON.parse(localStorage.getItem('current'));
     const { id } = useParams();
 
     const user = current && current.id == id ? current : users.find(item => item.id.value === id);
@@ -17,14 +17,12 @@ export default function MyProfilePage(props) {
         user.city = user.location.city;
         user.birthday = user.dob.date;
         user.image = user.picture.large;
-
-    }  
-  
+    }
 
     return (
         <div className='profile'>
             <div className='profile__nav'>
-                {/* <Link className='link' to="/searching">Назад</Link> */}
+                <Link to="/" className='link'>На главную</Link>
                 <Link className='link' style={{ marginRight: "20px" }} to="/searching">Поиск</Link>
                 <Link onClick={onClick} className='link' to='/'>Выход</Link>
             </div>
@@ -57,7 +55,24 @@ export default function MyProfilePage(props) {
                 <div className='profile__information'>
 
                 </div>
-                {/* <input type="file" id="file" name="file" multiple></input> */}
+                <label
+                    htmlFor="file"
+                    className='profile__label'
+                    style={{
+                        display: user !== current ? "none" : "flex"
+                    }}
+                >
+                    Изменить фото
+                    <input
+                        style={{
+                            display: 'none'
+                        }}
+                        type="file"
+                        id="file"
+                        name="file"
+                    >
+                    </input>
+                </label>
 
             </div>
         </div>

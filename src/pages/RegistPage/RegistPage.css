@@ -5,9 +5,9 @@
     display: flex;
     justify-content: space-between;
     z-index: 100;
-    width: 100%;
+    width: 1500px;
     height: 100%;
-    padding: 40px 160px 20px 150px;
+    padding: 60px 60px;
 }
 
 .wrapper__back {
@@ -32,11 +32,13 @@
 .wrapper__div {
     width: max-content;
     height: max-content;
-    background-color: rgba(40, 11, 201, 0.323);
+    /* background-color: rgba(40, 11, 201, 0.455); */
     border-radius: 30px;
     padding: 20px;
     margin: 0px 20px 0 0;
     text-align: center;
+    background: linear-gradient(to bottom, rgba(6, 34, 213, 0.758), rgb(252, 118, 0));
+    box-shadow: 5px -15px 20px 10px rgb(58, 58, 58);
 }
 
 .form__galaxy_of_love {
@@ -48,7 +50,7 @@
     color: aliceblue;
     border-radius: 50%;
     margin-bottom: 40px;
-    background-color: rgba(64, 1, 188, 0.534);
+    /* background-color: rgba(63, 1, 188, 0.597); */
     z-index: 10;
     font-family: 'Cookie', cursive;
 }
@@ -60,10 +62,12 @@
 }
 
 .form__regist {
-    width: max-content;
+    width: 410px;
     padding: 10px 30px 30px 30px;
-    border-radius: 15px;
-    background-color: rgba(6, 34, 213, 0.312);
+    border-radius: 40px;
+    /* background-color: rgba(6, 34, 213, 0.455); */
+    background: linear-gradient(to left bottom, rgba(6, 34, 213, 0.827), rgb(252, 118, 0));
+    box-shadow: 15px -10px 20px 10px rgb(58, 58, 58);
 }
 
 .form__regist_input {
@@ -82,7 +86,7 @@
     color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
 }
 
@@ -110,6 +114,7 @@
     cursor: pointer;
     background-color: rgba(88, 8, 217, 0.666);
     color: aliceblue;
+    font-size: 18px;
 }
 
 .form_span {
@@ -146,4 +151,52 @@
     padding: 10px;
     border: 3px solid white;
     border-radius: 20px;
+}
+
+.form__regist_input_file {
+    display: none;
+}
+
+.form__regist_label_photo:hover {
+    cursor: pointer;
+    font-size: 18px;
+    background-color: rgba(64, 1, 188, 0.534);
+    color: aliceblue;
+}
+
+.form__regist_label_photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 180px;
+    background-color: rgb(213, 216, 216);
+    color: black;
+    border-radius: 20px;
+    transition-duration: 0.8s;
+    font-size: 16px;
+}
+
+.hidden{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    margin: 5px 0 0 150px ;
+}
+
+.form__regist_button_eye {
+    width: 30px;
+    position: relative;
+    right: 35px;
+}
+
+.form__regist_button_eye:hover {
+    cursor: pointer;
 }

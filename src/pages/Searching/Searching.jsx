@@ -5,11 +5,11 @@ import { Users } from '../../App';
 
 export default function Searching(props) {
 
-    const { users, onSubmit, onClick, click, entrance } = props;
+    const { users, onSubmit, onClick, click, entrance, valueAgeFrom, valueAgeBefore, onchangeFrom, onchangeBefore } = props;
     const current = JSON.parse(localStorage.getItem('current'));
 
+    // if(current === null) return null;
     // console.log(users)
-
     return (
         <div className="searching">
 
@@ -22,7 +22,7 @@ export default function Searching(props) {
 
             <div className='searching__people'>
 
-                <h2 style={{ margin: '0 150px' }}>Поиск</h2>
+                <h2 style={{ textAlign: "center" }}>Поиск</h2>
 
                 <form
                     onSubmit={onSubmit}
@@ -73,13 +73,21 @@ export default function Searching(props) {
                     </label>
 
                     <label htmlFor="number">
-                        Возраст
+                        Возраст: <span style={{margin: "0 5px"}}>от</span>
                         <input
-                            className='searching__form_input'
+                            className='searching__form_input_age'
                             type="number"
-                            name='age'
-                            placeholder='Возраст'
-                            style={{ margin: '0 30px 0 10px' }}
+                            name='age_from'
+                            value={valueAgeFrom}
+                            onChange={onchangeFrom}
+                        />
+                        <span style={{margin: "0 5px"}}>до</span>
+                        <input 
+                        className='searching__form_input_age'
+                        type="number"
+                        name='age_before'
+                        value={valueAgeBefore}
+                        onChange={onchangeBefore}
                         />
                     </label>
                     <br />

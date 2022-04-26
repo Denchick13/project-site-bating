@@ -1,30 +1,31 @@
 import '../RegistPage/RegistPage.css';
 import { Link } from 'react-router-dom';
-
+import eyeClose from '../../components/images/not-visible-interface-symbol-of-an-eye-with-a-slash-on-it_icon-icons.com_57783.png'
+import eyeOpen from '../../components/images/eye-visible-outlined-interface-symbol_icon-icons.com_57844.png'
 
 export default function RegistPage(props) {
 
-    const { onSubmit, active, timeout } = props;
-
-    setTimeout(timeout, 2000);
+    const { onSubmit, active, hidden, onclick, iseye, value, onchange, click } = props;
 
     return (
         <>
-        { active && <div className='regist__message'>
+            {active && <div className='regist__message'>
                 <div className='regist__message_div'>Зарегистрируйтесь!</div>
             </div>
             }
-           
+
             <div className="wrapper">
 
-
-                <Link className='wrapper__back' to='/'></Link>
+                <Link
+                    to='/'
+                    className='wrapper__back'
+                    onClick={click}
+                >
+                </Link>
 
                 <div className='wrapper__div'>
-
                     <p className='wrapper__text'>Galaxy Of Love</p>
                     <p className='wrapper__text_next'>сайт для серьезных знакомств!</p>
-
                 </div>
 
                 <form
@@ -51,7 +52,7 @@ export default function RegistPage(props) {
                             required
                         />
                     </label>
-                    <br />
+
                     <div
 
                         className='form__regist_label'
@@ -79,7 +80,7 @@ export default function RegistPage(props) {
                         />
                         <label htmlFor="choice1">женский</label>
                     </div>
-                    <br />
+
                     <label
                         htmlFor="email"
                         className='form__regist_label'
@@ -94,20 +95,32 @@ export default function RegistPage(props) {
                             required
                         />
                     </label>
-                    <br />
+
                     <label
                         htmlFor="password"
                         className='form__regist_label'
                     >
                         <span className="form_span">Пароль</span>
                         <input
+                            value={value ?? ''}
+                            onChange={onchange}
                             style={{ width: "215px" }}
                             className='form__regist_input'
-                            type="password"
+                            type={!iseye ? "password" : "text"}
                             name='password'
                             placeholder='Не менее 8 символов'
                             required
                         />
+                        <img
+                            onClick={onclick}
+                            src={!iseye ? eyeClose : eyeOpen}
+                            className='form__regist_button_eye'
+                            style={{
+                                display: value ? "block" : "none",
+
+                            }}
+                        />
+
                     </label>
                     <label
                         htmlFor="city"
@@ -123,7 +136,7 @@ export default function RegistPage(props) {
                             required
                         />
                     </label>
-                    <br />
+
                     <label
                         htmlFor="date"
                         className='form__regist_label form__regist_label_date'
@@ -140,10 +153,12 @@ export default function RegistPage(props) {
                         />
                     </label>
 
-                    <label>
-                        <p>Фото</p>
-                        <input type="file" name='photo' required/>
+                    <label htmlFor='input_photo' className='form__regist_label' required>
+                        <p style={{ width: "110px" }}>Фото</p>
+                        <input className='form__regist_input_file' id='input_photo' type="file" name='photo' />
+                        <p className='form__regist_label_photo' required>Выберите файл</p>
                     </label>
+                    <p className='hidden' style={{ display: !hidden ? "none" : "flex" }}>Выберите файл</p>
 
                     <button
                         className='regist__button'
